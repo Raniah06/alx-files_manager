@@ -1,124 +1,77 @@
-# Files Manager
+# **Blog Platform (MERN Stack)**
 
-A comprehensive file storage and management platform built with Node.js.
+A **full-stack blog platform** built with **React (frontend)** and **Node.js (backend)**.  
+The application allows users to create, edit, delete, and read blog posts with authentication and image uploads.
 
-## Overview
+# **Files Manager API**
 
-This project is a file storage and management platform that combines various backend technologies to create a robust file management system. It implements user authentication, file upload/download capabilities, image processing, and background job processing.
+A backend file management system built with **Node.js, Express, MongoDB, and Redis**. It provides authentication, file storage, and folder management functionalities.
 
-## Features
+---
 
-- User authentication and management
-- File upload and storage
-- File permission management (public/private)
-- Image thumbnail generation
-- Background job processing
-- Email notifications
-- API-first design
-- Redis caching
-- MongoDB storage
+## **Table of Contents**
+- [Description](#description)
+- [Features](#features)
+- [Technologies](#technologies)
+- [Installation](#installation)
+- [Configuration](#configuration)
+- [Usage](#usage)
+- [API Endpoints](#api-endpoints)
+- [Project Structure](#project-structure)
+- [Testing](#testing)
+- [Troubleshooting](#troubleshooting)
+- [Author](#author)
 
-## Technology Stack
+---
 
-- **Runtime**: Node.js
-- **Framework**: Express.js
-- **Database**: MongoDB
-- **Caching**: Redis
-- **Job Queue**: Bull
-- **Testing**: Mocha
-- **Development**: Nodemon
-- **Image Processing**: Sharp (for thumbnails)
-- **Email**: NodeMailer
+## **Description**
+Files Manager is a RESTful API that allows users to:
+- Authenticate using a token-based system.
+- Upload and manage files (images, text, and other documents).
+- Create and organize folders.
+- Store metadata in MongoDB.
+- Use Redis for session management and caching.
 
-## API Endpoints
+---
 
-### Authentication
+## **Features**
+✔ User authentication via token-based sessions.  
+✔ Create, retrieve, update, and delete files and folders.  
+✔ Store metadata in MongoDB for efficient querying.  
+✔ Redis caching for fast authentication lookups.  
+✔ Robust API design with proper error handling.  
 
-- `POST /users` - Create new user
-- `GET /users/me` - Get current user info
-- `GET /connect` - Sign in user
-- `GET /disconnect` - Sign out user
+---
 
-### Files
+## **Technologies**
+The project is built using:
 
-- `POST /files` - Upload new file
-- `GET /files/:id` - Get file by ID
-- `GET /files` - List all files
-- `PUT /files/:id/publish` - Make file public
-- `PUT /files/:id/unpublish` - Make file private
-- `GET /files/:id/data` - Get file content
+| Technology  | Description |
+|-------------|------------|
+| Node.js     | JavaScript runtime for the backend |
+| Express.js  | Lightweight web framework for APIs |
+| MongoDB     | NoSQL database for storing user and file data |
+| Redis       | In-memory database for caching and authentication |
+| Mongoose    | ODM for MongoDB |
+| UUID        | Generate unique identifiers for files |
+| Multer      | Middleware for handling file uploads |
+| Babel       | JavaScript transpiler (ES6+ support) |
+| ESLint      | JavaScript linting and style guide |
+| Jest        | Testing framework for unit tests |
 
-## Setup and Installation
+---
 
-1. Clone the repository:
+## **Installation**
 
-    ```bash
-    git clone https://github.com/yourusername/alx-files_manager.git
-    cd alx-files_manager
-    ```
+### **Prerequisites**
+Before setting up the project, ensure the following installed:
+- **Node.js**
+- **MongoDB**
+- **Redis**
 
-2. Install dependencies:
-
-    ```bash
-    npm install
-    ```
-
-3. Configure environment variables:
-
-    ```bash
-    cp .env.example .env
-    # Edit .env with your configuration
-    ```
-
-4. Start required services:
-
-    ```bash
-    # Start MongoDB
-    mongod
-
-    # Start Redis
-    redis-server
-    ```
-
-5. Run the application:
-
-    ```bash
-    npm start
-    ```
-
-## Development
-
-- Run in development mode: `npm run dev`
-- Run tests: `npm test`
-- Lint code: `npm run lint`
-
-## Environment Variables
-
-- `PORT`: API port (default: 5000)
-- `DB_HOST`: MongoDB host
-- `DB_PORT`: MongoDB port
-- `DB_DATABASE`: MongoDB database name
-- `REDIS_HOST`: Redis host
-- `REDIS_PORT`: Redis port
-- `FOLDER_PATH`: Local storage folder path
-
-## Testing
-
-The project includes comprehensive tests using Mocha:
-
+#### **1. Clone the repository**
 ```bash
-npm test
-```
+git clone https://github.com/Raniah06/files_manager.git
+cd files_manager.
 
-## Contributing
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## Acknowledgments
-
-- ALX Software Engineering Program
-- All contributors and reviewers
+### **Steps to Set Up the Project**       - Install dependencies: npm install.      - Start redis: redis-server               - Start server: npx nodemon server.       - Start ckient: npm start.
